@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+ <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L89QKQFFGK"></script>
     <script>
@@ -19,31 +19,42 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/6adb4d772a.js" crossorigin="anonymous"></script>
-        <title>Zhaohui Zhao's Website</title>
+        <title>Contact Zhaohui</title>
     </head>
     <body>
-        <header>
-            <div class="skip"><a href="#skipto">Skip to Content</a></div>
+       <header>
+           <div class="skip"><a href="#skipto">Skip to Content</a></div>
            
             <nav>
-                <a class="current" href="index.html">Home</a>
+                <a class="idle" href="index.html">Home</a>
                 <a class="idle"href="acj220.html">ACJ 220</a>
                 <a class="idle"href="h120.html">H120</a>
                 <a class="idle"href="b787.html">Boeing 787</a>
-                <a class="idle"href="aboutme.html">Contact</a>
+                <a class="current"href="aboutme.html">Contact</a>
             </nav>
-         
+           
         </header>
         <main>
-            <div class="intros" id="homepageintro">
-                <div class="introsText">
-                <p>Hi there! My name is Zhaohui. I am an avid Aviation Geek (Avgeek for short) who loves every machine that flies! On this website are the aircrafts that I want to fly one day.</p>
+            <div class="intros"">
+            <div class="introsText">
+                <h1>Contact Form</h1>
                 </div>
+            </div>
+
+            <div class="formContainer">
+            <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="John">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Doe">
+                
+                <input type="submit" value="Submit">
+            </form>
             </div>
             
         </main>
         <footer>
-            <p><i class="fa-solid fa-heart"></i> Zhaohui Zhao</p>
+          <p><i class="fa-solid fa-heart"></i> Zhaohui Zhao</p>
         </footer>
     </body>
 </html>

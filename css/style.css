@@ -1,89 +1,194 @@
-/*Add padding and margin to space out the page.
-Make the font larger too.*/
+
 body{
-	margin:1%;
-	padding:1%;
-	font-size:150%;
-	font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
 }
 
-
-/*Make the h1 heading bigger with a bold font*/
 h1{
-	font-size: 2em; 
-	font-weight: bold;
+    margin:0;
+    position:relative;
+    font-size: 40px;
+    font-family: 'Space Mono', monospace;
+    color:#3396c4;
 }
 
-/*Style the images*/
-img{
-    height: auto;
-    border: 3px solid skyblue;
-    padding: 25px;
-    border-radius: 10px;
-    margin: 10px;
-	display: block;
-	transition-duration: 0.3s;
-    transition-property: transform;
+
+
+p{
+    color:#3a3a3a;
+    line-height: 25px;
+    font-family: 'Space Mono', monospace;
 }
 
-img:hover
+
+header{
+    width:auto;
+    position: sticky;
+    top:0;
+    background-color: #3396c4;
+    z-index: 1;
+    font-size:30px;
+    padding:10px;
+}
+
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position:absolute;
+    top: -50px;
+}
+
+.skip a:focus{
+    position:absolute;
+    top:20px;
+    color:black;
+    font-size: 25px;
+    font-family: 'Space Mono', monospace;
+    text-decoration: none;
+}
+
+
+header nav a{
+    display:block;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+}
+
+.current{
+    padding:10px;
+    background-color:#ffffff;
+    color:#3396c4;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size:20px;
+}
+
+.idle{
+    
+    font-size:16px;
+    color:#ffffff;
+    text-decoration: none;
+    padding:10px;
+}
+
+
+.intros
 {
-	border: none;
-	transform: scale(1.1);
+    height: 100px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/*Make the h2 heading match h1*/
-h2{
-	font-size: 2em; 
-	font-weight: bold;
-}
-
-/*Improve the spacing for paragraphs AND headings*/
-p, h1, h2 {
-    padding: 10px;
-}
-
-/*Add borders around the main components and some
-space too*/
-header, nav, main, h1, footer{
-	border: 2px solid grey;
-	margin: 10px 0;
-}
-
-
-/*Change the styling for all of the list 
-items in the nav section*/
-nav li{
-	padding:10px;
-	/* width:25%; */
-	/* border:1px solid black; */
-	display: inline-block;
-	background-color: #001b5b;
-	/* width: 20%; */
-	align-content: center;
-}
-
-.active
-{	
-	color: #001b5b;
-	background-color: white;
-	
-}
-
-#skip
+.introsText
 {
-	color: #001b5b;
+    width: 80%;
+    border-radius: 20px;
+    background-color: #ffffffd3;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.active a
+
+.introsText p
 {
-	color: #001b5b;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.intros h1, .intros p
+{
+    padding: 20px;
 }
 
 
+#homepageintro{
+    height: 600px;
+    background-image: url('../images/b737sim.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+}
 
-/*Added this so the links stay the same color*/
-/* a:visited{color:purple} */
+
+.content{
+    display:grid;
+    grid-column-gap:10px;
+    grid-row-gap:20px;
+    grid-template-columns: auto 500px auto;
+    
+}
 
 
+.contentBlock
+{
+    grid-column:2/span 1;
+    
+}
 
+  
+
+  
+.formContainer {
+    margin: auto;
+    padding: 16px;
+    color: #ffffff;
+    background-color: #3396c4;
+    width:50%;
+}
+
+form label
+{
+    display: block;
+    font-family: 'Space Mono', monospace;
+    
+}
+@keyframes scaling {
+    from{scale: 50%;}
+    to{scale: 100%;}  
+  }
+
+@keyframes dissolving {
+    from{opacity: 0;}
+    to{opacity: 100%;}  
+  }
+
+  img:nth-child(even){
+    animation-name: scaling;
+    animation-duration:1s;
+  }
+
+  img:nth-child(odd)
+  {
+    animation-name: dissolving;
+    animation-duration:2s;
+  }
+
+footer{
+    background-color: #3396c4;
+    padding:40px;
+    font-family: 'Space Mono', monospace;
+}
+
+footer p
+{
+    color:#ffffff;
+    text-align: center;
+}
+
+
+@media (prefers-reduced-motion:reduce)
+{
+    img {
+        animation-name:none;
+    }
+    
+}
