@@ -152,8 +152,8 @@ form label
     
 }
 @keyframes scaling {
-    from{scale: 50%;}
-    to{scale: 100%;}  
+    from{scale: 0.5;}
+    to{scale: 1;}  
   }
 
 @keyframes dissolving {
