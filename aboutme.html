@@ -40,13 +40,17 @@
                 <h1>Contact Form</h1>
                 </div>
             </div>
-
+           
             <div class="formContainer">
-            <form action="/action_page.php">
+            <form action="https://formspree.io/f/mpzbylrg" method="post">
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="John">
                 <label for="lname">Last Name</label>
                 <input type="text" id="lname" name="lastname" placeholder="Doe">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="john.doe@example.com">
+                 <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
                 
                 <input type="submit" value="Submit">
             </form>
